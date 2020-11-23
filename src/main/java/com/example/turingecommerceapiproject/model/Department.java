@@ -1,10 +1,20 @@
 package com.example.turingecommerceapiproject.model;
 
-public class Department {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Department")
+public class Department {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer department_id;
     private String name;
     private String description;
+
+    public Department()
+    {
+
+    }
 
     public Department(Integer department_id, String name, String description)
     {
